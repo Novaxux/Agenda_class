@@ -1,0 +1,350 @@
+
+
+ 
+.fotografia{
+    border-radius: 100%;
+    width: 8rem;
+    height: 8rem;
+    margin-left: auto;
+}
+body {
+
+  font-family: 'Roboto', sans-serif;
+
+  color: rgba(0, 0, 0, 0.87);
+
+  background-color: #fafafa;
+
+  margin: 0;
+
+  padding: 0;
+
+  line-height: 1.5;
+
+}
+
+/* Estilos generales para los inputs */
+
+input {
+
+  font-family: 'Roboto', sans-serif;
+
+  font-size: 16px;
+
+  padding: 10px 12px;
+
+  border: none;
+
+  border-radius: 4px;
+
+  background-color: rgba(0, 0, 0, 0.09);
+
+  color: rgba(0, 0, 0, 0.87);
+
+  outline: none;
+
+  transition: background-color 0.3s ease;
+
+}
+
+ 
+
+/* Estilo para el label */
+
+input + label {
+
+  position: relative;
+
+  top: -60px;
+
+  left: 12px;
+
+  font-size: 16px;
+
+  color: rgba(0, 0, 0, 0.54);
+
+  pointer-events: none;
+
+  transition: all 0.3s ease;
+
+}
+
+ 
+
+/* Estilo para el label cuando el input tiene valor */
+
+input:not(:placeholder-shown) + label,
+
+input:focus + label {
+
+  top: -75px;
+
+  left: 8px;
+
+  font-size: 12px;
+
+  color: #3f51b5;
+
+}
+
+ 
+
+/* Estilo para el underline */
+
+input::after {
+
+  content: "";
+
+  display: block;
+
+  width: 100%;
+
+  height: 2px;
+
+  background-color: #3f51b5;
+
+  transform: scaleX(0);
+
+  transition: transform 0.3s ease;
+
+}
+
+ 
+
+/* Estilo para el underline cuando el input tiene foco */
+
+input:focus::after {
+
+  transform: scaleX(1);
+
+}
+
+ 
+
+.card {
+
+        margin: 10px;
+
+  width: 300px; /* Ajusta el ancho según tus necesidades */
+
+  background-color: #fff; /* Color de fondo */
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Sombra */
+
+  border-radius: 8px; /* Bordes redondeados */
+
+  overflow: hidden; /* Evita que el contenido desborde la tarjeta */
+
+}
+
+.material-button {
+
+  display: inline-flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  height: 36px;
+
+  padding: 0 16px;
+
+  border-radius: 4px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.02857em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  box-sizing: border-box;
+
+}
+
+ 
+
+.material-button--contained {
+
+  background-color: #3f51b5;
+
+  color: #fff;
+
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+ 
+
+.material-button--contained:hover {
+
+  background-color: #303f9f;
+
+}
+
+ 
+
+.material-button--contained:active {
+
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+ 
+
+.material-button--outlined {
+
+  border: 1px solid #3f51b5;
+
+  color: #3f51b5;
+
+}
+
+ 
+
+.material-button--outlined:hover {
+
+  background-color: #e0e0e0;
+
+  color: #3f51b5;
+
+}
+
+ 
+
+.material-button--outlined:active {
+
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+ 
+
+.card-header {
+
+  padding: 5px;
+
+  background-color: #f1f1f1; /* Color de fondo del encabezado */
+
+}
+
+ 
+
+.todo-elancho{
+
+    width: 98%;
+
+}
+
+.bg-azul
+
+{
+    text-align: center;
+    background-color: #adb9f3;  
+
+}
+
+.bg-amarillo{
+    display: flex;
+    justify-content: center;
+    background-color: hwb(56 31% 4%);
+
+}
+
+.card-body {
+
+  padding: 20px;
+
+}
+
+ 
+
+.card-footer {
+
+  padding: 20px;
+
+  background-color: #f1f1f1; /* Color de fondo del pie */
+
+}
+.buscar{
+margin: 1rem;
+height: 5rem;
+width: 70%;
+/* background-color:#adb9f3 ; */
+border-radius: 4px;
+display: flex;
+justify-content: center;
+align-items:center
+}
+.input_buscar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  border-radius: 1rem;
+  background-color:#fafafa;
+
+  padding: 3px;
+  box-shadow: -5px 8px #88888883;
+
+}
+
+.input_buscar select{
+  height:100% ;
+  width: 5rem;
+  border: none;
+  cursor: pointer;
+  background-color: #303f9f;
+}
+
+.input_buscar-selected{
+  background-color: #303f9f;
+}
+.opciones_label{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  
+}
+.patron{
+  height: 55%;
+  background-color: rgba(0, 0, 0, 0.09);
+  border-radius: 0;
+}
+.boton_buscar{
+  height: 100%;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem ;
+  border:none ;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background-color: #3f51b5;
+  cursor: pointer;
+;
+}
+.boton_buscar:hover{
+  background-color:#20f58766;
+  color: rgb(0, 0, 0);
+}
+dialog {
+
+            /*width: 350px;*/
+
+            padding: 20px;
+
+            background-color: #f9f9f9;
+
+            border: 1px solid #ccc;
+
+            border-radius: 5px;
+
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+    

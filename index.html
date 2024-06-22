@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agenda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- <body onload="cargarDatos()"> -->
+<body >
+
+    <div class="card todo-elancho">
+
+    <div class="card-header bg-azul ">
+
+        <h1>Agenda</h1>
+
+    </div>
+
+    <div class="card-body">
+
+    <label for="Nombre">Nombre</label><br>
+
+    <input class="todo-elancho" type="text" id="Nombre" name="Nombre"><br>
+
+    <label for="Direccion">Dirección</label><br>
+
+    <input class="todo-elancho" type="text" id="Direccion"  name="Direccion"><br>
+
+    <label for="Telefono">Teléfono</label><br>
+
+    <input type="text" id="Telefono" name="Telefono"><br>
+
+    <label for="Correo">Correo</label><br>
+
+    <input type="mail" id="Correo" name="Correo"><br>
+    
+    <label for="fotografia">Fotografía</label><br>
+
+    <input type="text" id="fotografia" name="fotografia"><br>
+
+</div>
+
+<div class="card-footer">
+
+    <button onclick="Agregar()" class="material-button material-button--contained">Agregar</button>
+
+</div>
+
+</div>
+<!-- buscar el elemento -->
+<section class="buscar">
+    <div class="input_buscar">
+        
+        <label class='opciones_label' for="opcion">Opción a buscar</label>
+        <select name="opcion" id="opcion">
+          <option value="opcion1">Nombre</option>
+          <option value="opcion2">Dirección</option>
+          <option value="opcion3">Teléfono</option>
+          <option value="opcion4">Correo</option>
+          
+        
+        </select>
+        
+        <input class="patron" type="text" name="" id="patron">
+        <button class='boton_buscar' onclick=Buscar() class="material-button material-button--contained">Buscar</button> 
+
+    </div>
+    
+    
+</section>
+    <div id="listado"></div>
+
+    <dialog id="editar">
+
+        <div class="card">
+
+            <div class="card-header bg-amarillo">
+
+                <h1>Editar</h1>
+
+            </div>
+
+            <div class="card-body">
+
+                <label for="eNombre">Nombre</label><br>
+
+                <input class="todo-elancho" type="text" id="eNombre" name="eNombre"><br>
+
+                <label for="eDireccion">Dirección</label><br>
+
+                <input class="todo-elancho" type="text" id="eDireccion"  name="eDireccion"><br>
+
+                <label for="eTelefono">Teléfono</label><br>
+
+                <input type="text" id="eTelefono" name="eTelefono"><br>
+
+                <label for="eCorreo">correo</label><br>
+
+                <input type="mail" id="eCorreo" name="eCorreo"><br>
+                
+                <label for="fotografia">fotografía</label><br>
+
+                <input type="text" id="efotografia" name="fotografia"><br>
+
+                <p id="id" hidden ></p>
+
+              </div>
+
+        </div>
+
+        <div class="card-footer">
+
+            <button onclick="guardarEditar()" class="material-button material-button--contained">Guardar</button>
+
+            <button onclick="this.closest('dialog').close()" class="material-button material-button--contained">Cancelar</button>
+
+        </div>
+
+       
+
+    </dialog>
+    
+    <!-- ventana modal para no encontrado -->
+    <dialog id="error">
+
+        <div class="card">
+
+            <div class="card-header bg-amarillo">
+
+                <h1>Error</h1>
+
+            </div>
+
+            <div class="card-body">
+
+                <h2>No se encontró ningún registro que coincidiera con los criterios de búsqueda"
+
+
+                    </h2>
+
+              </div>
+
+        </div>
+
+        <div class="card-footer">
+
+            <button onclick="this.closest('dialog').close()" class="material-button material-button--contained">Cerrar</button>
+
+        </div>
+
+       
+
+    </dialog>
+  </dialog>
+    
+  <!-- ventana modal para borrar -->
+  <dialog id="borrar">
+
+      <div class="card">
+
+          <div class="card-header bg-amarillo">
+
+              <h1>Borrar</h1>
+
+          </div>
+
+          <div class="card-body">
+
+              <h2>¿Desea eliminar este registro?
+              </h2>
+              <div id="idborrar" ></div>
+
+            </div>
+
+      </div>
+
+      <div class="card-footer">
+
+          <button onclick="this.closest('dialog').close()" class="material-button material-button--contained">No</button>
+          <button onclick="confirmarBorrar()" class="material-button material-button--contained">Sí</button>
+
+      </div>
+
+     
+
+  </dialog>
+    
+    <script src="app.js">
+</script>
+</body>
+
+</html>
